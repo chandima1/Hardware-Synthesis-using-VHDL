@@ -1,0 +1,29 @@
+net "reset" loc = "A7";
+
+net "clk1" loc = "B8";
+
+net "output(0)" loc = "M5";
+net "output(1)" loc = "M11";
+net "output(2)" loc = "P7";
+net "output(3)" loc = "P6";
+net "output(4)" loc = "N5";
+net "output(5)" loc = "N4";
+net "output(6)" loc = "P4";
+net "output(7)" loc = "G1";
+
+net "led(0)" loc = "B7";
+net "led(1)" loc = "C5";
+net "led(2)" loc = "B6";
+net "led(3)" loc = "C6";
+net "led(4)" loc = "B5";
+net "led(5)" loc = "J3";
+net "led(6)" loc = "A3";
+net "led(7)" loc = "B2";
+
+net "choose_up" loc = "P11";
+net "choose_down" loc = "L3";
+
+#net "freq(0)" loc = "G3";
+#net "freq(1)" loc = "F3";
+#net "freq(2)" loc = "E2";
+#net "freq(3)" loc = "N3";

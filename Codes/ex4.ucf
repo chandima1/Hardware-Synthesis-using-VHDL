@@ -1,0 +1,8 @@
+net "Output(0)" loc = "M5";
+net "Output(1)" loc = "M11";
+net "Output(2)" loc = "P7";
+net "Output(3)" loc = "P6";
+
+net "Reset" loc = "A7";
+
+net "clk1" loc = "B8";

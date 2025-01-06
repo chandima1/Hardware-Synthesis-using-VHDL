@@ -1,0 +1,21 @@
+net "ssd(0)" loc = "M12";
+net "ssd(1)" loc = "L13";
+net "ssd(2)" loc = "P12";
+net "ssd(3)" loc = "N11";
+net "ssd(4)" loc = "N14";
+net "ssd(5)" loc = "H12";
+net "ssd(6)" loc = "L14";
+
+net "reset" loc = "A7";
+
+net "clk1" loc = "B8";
+
+net "choose(0)" loc = "G3";
+net "choose(1)" loc = "F3";
+net "choose(2)" loc = "E2";
+net "choose(3)" loc = "N3";
+
+net "anode(0)" loc = "F12";
+net "anode(1)" loc = "J12";
+net "anode(2)" loc = "M13";
+net "anode(3)" loc = "K14";
