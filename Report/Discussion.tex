@@ -1,0 +1,108 @@
+All through out this practical, the FPGA was programmed as a RAM. So, the program was only temporarily saved in the FPGA and executed. Once the power to the FPGA is removed, the FPGA clears its programming memory. If the FPGA is to be used in an application where the use of a ROM is needed, one could program the device permanently. This could be achieved by selecting the PROM option in the Adept software instead of FPGA. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/co2}
+	\caption{Generation of the PROM file}
+	\label{fig:co2}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/co1}
+	\caption{Changing from FPGA to PROM}
+	\label{fig:co1}
+\end{figure}
+
+\noindent
+A very useful feature of the Linux ISE is the ability to view the schematic of a program. There are 2 types of schematics.
+\begin{enumerate}
+	\item RTL schematic - To view a schematic representation of the pre-optimized design in terms of generic symbols like logic gates, adders, multipliers and counters.
+	\item Technology schematic - To view a schematic representation of the design in terms of logic elements optimized for the target device (technology).
+\end{enumerate}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/co3}
+	\caption{Selecting the schematic view}
+	\label{fig:co1}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.86\linewidth]{pics/vhdl/co4}
+		\caption{ Technology schematic }
+		\label{fig:co4}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pics/vhdl/co5}
+		\caption{RTL schematic}
+		\label{fig:co5}
+	\end{subfigure}
+	\caption{The schematics of an AND gate}
+	\label{fig:cor}
+\end{figure}
+
+\noindent
+ By double clicking on the instance handling the logic gate obtained by a technology schematic, the following details of the selected instance can be obtained (instance dialog).
+ \begin{itemize}
+ 	\item Schematic.
+ 	\item Equation.
+ 	\item Truth table.
+ 	\item K-map.
+ \end{itemize}
+ 
+ \begin{figure}[!h]
+ 	\centering
+ 	\begin{subfigure}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[width=.75\linewidth]{pics/vhdl/co6}
+ 		\caption{Schematic}
+ 		\label{fig:NewFile3}
+ 	\end{subfigure}%
+ 	\begin{subfigure}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[width=.75\linewidth]{pics/vhdl/co7}
+ 		\caption{Truth table}
+ 		\label{fig:NewFile4}
+ 	\end{subfigure}
+ 	\begin{subfigure}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[width=.75\linewidth]{pics/vhdl/co8}
+ 		\caption{0100 provided}
+ 		\label{fig:NewFile5}
+ 	\end{subfigure}%
+ 	\begin{subfigure}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[width=.75\linewidth]{pics/vhdl/co9}
+ 		\caption{K-map}
+ 		\label{fig:NewFile6}
+ 	\end{subfigure}
+ 	\caption{Instance dialog}
+ 	\label{fig:NewFile}
+ \end{figure}
+
+\noindent
+In applications where very high speed information transfers are involved, timing delays play a major role in the accuracy and precision of the outputs. Hence, calculating signal delays is of utmost importance. By using the static timing option in the design overview, signal delay information can be obtained.
+
+\pagebreak
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/co10}
+	\caption{Selection of static timing}
+	\label{fig:co10}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/co11}
+	\caption{Delay information of an AND gate where a and b are inputs and c is the output}
+	\label{fig:co11}
+\end{figure}
+
+\noindent
+The Basys2 FPGA board contains a primary, user-settable silicon oscillator that produces 25MHz, 50MHz, or 100MHz based on the position of the clock select jumper at JP4. The default frequency is 50 MHz. The primary oscillator is a silicon oscillator whose pros are its flexibility and cheapness. Like any device, it has its own cons as well. In the case of a  silicon oscillator, that being the frequency instability. So in applications where frequency stability is needed for example, driving of a VGA monitor, using a crystal oscillator installed in the IC6 socket gives a much more defined and an accurate output. 

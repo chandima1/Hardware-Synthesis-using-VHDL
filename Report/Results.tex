@@ -1,0 +1,314 @@
+\subsection{Introdiction to VHDL}
+
+\subsubsection{Synthesis of a 2-input AND gate}
+
+The AND gate when simulated from ISIM showed the following behaviour.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r1}
+	\caption{The output of the AND gate when simulated through ISIM}
+	\label{fig:r1}
+\end{figure}
+
+The AND gate when synthesized through the FPGA board showed the following behaviour. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r2_1}
+	\caption{The output of the AND gate for various input states}
+	\label{fig:r1}
+\end{figure}
+
+\noindent
+As expected from an AND gate, the output became high only when all the inputs were high. This fact was clearly visible in the simulation as well as in the synthesized program. In the simulation, the signal denoted by c had become  high only when both inputs a and b were being high. In the synthesis, the LED lit only when both the switches were high. So, it could be verified that this program imitated the behaviour expected of an AND gate and hence it can be concluded that it's an AND gate.
+
+\pagebreak
+
+\subsubsection{Synthesis of a BCD to SSD decoder}
+
+The  BCD to SSD decoder when simulated from ISIM showed the following behaviour. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r3}
+	\caption{The output of the BCD to SSD decoder when simulated through ISIM}
+	\label{fig:r3}
+\end{figure}
+
+\noindent
+The BCD to SSD decoder when synthesized through the FPGA board showed the following behaviour. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r5}
+	\caption{The outputs of the BCD to SSD decoder }
+	\label{fig:r5}
+\end{figure}
+
+\noindent
+By using the switches SW0 to SW3, the numbers from 0 to 9 could be displayed on the SSD. The switches SW4 to SW7 could be used to select the digit of the SSD which needed to be activated.  
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r6}
+	\caption{Controlling of the digits in the SSD}
+	\label{fig:r6}
+\end{figure}
+
+\noindent
+In this selection process, selection of the digits in the SSD could be easily done by biasing the transistors AN0 (K14), AN1 (M13) , AN2 (J12) and AN3 (F21) connected to the SSD working in common anode mode.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r8}
+	\caption{SSD diagram and the schematic}
+	\label{fig:r8}
+\end{figure}
+
+\pagebreak
+
+\subsubsection{Modification of the BCD to SSD decoder with a test button}
+
+When the reset button was pressed, the all the digits in the SSD were lit.
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pics/vhdl/r9}
+		\caption{ Output of the SSD when the test button wasn't pressed}
+		\label{fig:r9}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pics/vhdl/r11}
+		\caption{Output of the SSD when the test button was pressed}
+		\label{fig:r11}
+	\end{subfigure}
+	\caption{Action of the test button}
+	\label{fig:r}
+\end{figure}
+
+\subsubsection{Synthesis of a mod 10 counter}
+
+The  mod 10 counter when simulated from ISIM showed the following behaviour.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/vhdl/r12}
+	\caption{The output of the counter when simulated through ISIM}
+	\label{fig:r12}
+\end{figure}
+
+\noindent
+From the above figure, it could be clearly observed that the output varies from 0000 to 1001 which indeed depicts a mod 10 counter action. The binary values of the 4 bits of the output signal and their states were clearly visible in the ISIM simulation.
+
+\noindent
+When the mod 10 counter was synthesized through the FPGA board, the outputs observed were as follows.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/r13}
+	\caption{The output of the counter displayed by LEDs when synthesized through the FPGA}
+	\label{fig:r13}
+\end{figure}
+
+\subsubsection{Combination of the mod 10 counter and the BCD to SSD decoder}
+
+The  combination of the mod 10 counter and the BCD to SSD decoder when simulated from ISIM showed the following behaviour. In this case, it was not easy to decipher the signal patterns and their binary values of the SSD output. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r16}
+	\caption{The output  when simulated using ISIM }
+	\label{fig:r15}
+\end{figure}
+
+\noindent
+When the program  was synthesized through the FPGA board, the outputs observed were as follows. It is clear from the below outputs that the SSD acts as a mod 10 which counted from 0 to 9. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{pics/vhdl/r14}
+	\caption{The output  when synthesized through the FPGA}
+	\label{fig:r14}
+\end{figure}
+
+\noindent
+The switches SW4 to SW7 could be used to select the digit of the SSD which needed to be activated.  
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{pics/vhdl/r6_2}
+	\caption{Controlling of the digits in the SSD}
+	\label{fig:r6_2}
+\end{figure}
+
+\subsection{DDS usign FPGA}
+
+\subsubsection{Production of a ramp signal}
+
+\textbf{Production of a saw tooth signal using an up counter}\\
+
+\noindent
+The  up counter when simulated from ISIM showed the following behaviour. The action of the up counter was clearly visible in the simulation. In this process, the $  choose_{-}up $ variable was assigned 1 and $ choose_{-}down $ variable was assigned 0. This was done as the code was written in such a way that when  $ choose_{-}up = 1 $ and $ choose_{-}down = 0 $, the program worked as an up counter (line 84 in the code in Appendix F). 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/vhdl/r17}
+	\caption{Up counter simulated by ISIM}
+	\label{fig:r17}
+\end{figure}
+
+\noindent
+The waveform obtained by the DSO connected to the R-2R ladder when the outputs of the up counter were connected to the R-2R ladder was as follows.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/NewFile0}
+	\caption{Waveform of the up counter}
+	\label{fig:newfile0}
+\end{figure}
+
+\noindent
+The frequency of the saw tooth signal produced had a frequency of 98 Hz and an amplitude (Vpp) of 336 mV. The frequency of the produced signal could be adjusted by changing the clock frequency of the "clk" signal. This could be done by adjusting the "count" value (line 72 of the code in Appendix F).\\
+
+\pagebreak
+
+\noindent
+\textbf{Production of a saw tooth signal using a down counter}\\
+
+
+\noindent
+The  down counter when simulated from ISIM showed the following behaviour. The action of the down counter was clearly visible in the simulation.  In this process, the $  choose_{-}up $ variable was assigned 0 and $ choose_{-}down $ variable was assigned 1. This was done as the code was written in such a way that when  $ choose_{-}up = 0 $ and $ choose_{-}down = 1 $, the program worked as a down counter (line 89 in the code in Appendix F). 
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/vhdl/r19}
+	\caption{Down counter simulated by ISIM}
+	\label{fig:r17}
+\end{figure}
+
+\noindent
+The waveform obtained by the DSO connected to the R-2R ladder when the outputs of the down counter were connected to the R-2R ladder was as follows.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/NewFile1}
+	\caption{Waveform of the saw tooth signal formed by the down counter}
+	\label{fig:newfile0}
+\end{figure}
+
+\noindent
+The frequency of the saw tooth signal produced had a frequency of 98 Hz and an amplitude (Vpp) of 336 mV. The frequency of the produced signal could be adjusted by changing the clock frequency of the "clk" signal. This could be done by adjusting the "count" value (line 72 of the code in Appendix F).\\
+
+\pagebreak
+
+
+\noindent
+\textbf{Production of a triangular signal using an up and down counter} \\
+
+\noindent
+The  up and down counter when simulated from ISIM showed the following behaviour. The action of the up and down counter was clearly visible in the simulation.  In this process, the $  choose_{-}up $ variable was assigned 1 and $ choose_{-}down $ variable was assigned 1. This was done as the code was written in such a way that when  $ choose_{-}up = 1 $ and $ choose_{-}down = 1 $, the program worked as an up and down counter (line 94 in the code in Appendix F). 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/vhdl/r20}
+	\caption{Up and down counter simulated by ISIM}
+	\label{fig:r20}
+\end{figure}
+
+\noindent
+The waveform obtained by the DSO connected to the R-2R ladder when the outputs of the up and down counter were connected to the R-2R ladder was as follows.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/NewFile2}
+	\caption{Waveform of the triangular signal formed by the up and down counter}
+	\label{fig:newfile0}
+\end{figure}
+
+\noindent
+The frequency of the triangular  signal produced had a frequency of 49 Hz and an amplitude (Vpp) of 332 mV. The frequency of the produced signal could be adjusted by changing the clock frequency of the "clk" signal. This could be done by adjusting the "count" value (line 72 of the code in Appendix F).\\
+
+\pagebreak
+
+\subsubsection{Production of a square signal}
+
+\noindent
+As the same program used in the production of the ramp signal was used in this exercise, the same result was obtained when simulated from ISIM.\\
+
+\noindent
+The waveform obtained by the DSO connected to the R-2R ladder when the outputs FPGA board were connected to the R-2R ladder was as follows. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\linewidth]{pics/vhdl/NewFile9}
+	\caption{Waveform of the square signal formed }
+	\label{fig:newfile9}
+\end{figure}
+
+\noindent
+When the switches from SW4 to SW7 were adjusted, the duty cycle of the produced square signal could be adjusted. SW4 represented the LSB and SW7 represented the MSB. Values from 0000 to 1111 could be created from the 4 switches and analog voltages corresponding to the created values were created from the 4 bit R-2R ladder. The output of this 4 bit R-2R ladder was connected to as the reference voltage of the comparator.
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.75\linewidth]{pics/vhdl/NewFile3}
+		\caption{0001 provided}
+		\label{fig:NewFile3}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.75\linewidth]{pics/vhdl/NewFile5}
+		\caption{0010 provided}
+		\label{fig:NewFile4}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=.75\linewidth]{pics/vhdl/NewFile7}
+	\caption{0100 provided}
+	\label{fig:NewFile5}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.75\linewidth]{pics/vhdl/NewFile9}
+		\caption{1000 provided}
+		\label{fig:NewFile6}
+	\end{subfigure}
+	\caption{Waveforms obtained when the switches were used}
+	\label{fig:NewFile}
+\end{figure}
+
+\noindent
+Although a square wave was created, it didn't appear to be exactly square shaped. This is due to the fact that the frequency of the counter used was not high enough. This could be averted by decreasing the "count" value from 1000 to a lower value (line 55 of the code in Appendix G).
+
+\subsubsection{Production of a sinusoidal signal}
+
+\noindent
+The  program when simulated from ISIM showed the following behaviour. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/r21}
+	\caption{The output  when synthesized through the FPGA}
+	\label{fig:r14}
+\end{figure}
+
+\noindent
+The waveform obtained by the DSO connected to the R-2R ladder when the outputs FPGA board were connected to the R-2R ladder was as follows. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\linewidth]{pics/vhdl/NewFile10}
+	\caption{Waveform of the sinusoidal signal formed }
+	\label{fig:newfile0}
+\end{figure}
+
+\noindent
+The frequency of the sinusoidal  signal produced had a frequency of 68.5 Hz and an amplitude (Vpp) of 340 mV. The frequency of the produced signal could be adjusted by changing the clock frequency of the "clk" signal. This could be done by adjusting the "count" value (line 55 of the code in Appendix H).

@@ -1,0 +1,371 @@
+\noindent
+As the practical was based on FPGA which was a new technology, the primary step was to get familiar with the Basys2 trainer board and the ISE used to create bit files needed for programming the FPGA. So, the Basys2 FPGA board and its data sheet were studied first.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/basys2-2}
+	\caption{Front look of the Basys2 Spartan-3E FGPA board }
+	\label{fig:basys2-2}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/i1}
+	\caption{Pin definitons of the Basys2 Spartan-3E FGPA board}
+	\label{fig:basys2pins}
+\end{figure}
+
+\noindent
+Then, the next step was to install the ISE Design Suite and the Digilent Adept softwares. When installing the ISE Design Suite, the System Edition was chosen.
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/step-08-400}
+	\caption{Installation of the ISE Design Suite: System Edition}
+	\label{fig:step-08-400}
+\end{figure}
+
+\noindent
+After the correct version of the ISE was installed, the next objective was to get familar with GUI of the ISE. In this process, a new project was created. When creating the new project in the ISE, the following selections were done in order to choose the correct device and the design flow. After a new project was made the needed codes could be written in a new file  by creating a new VHDL Module with any name. This could be achieved by creating a VHDL module in the new Source wizard panel. The assigning of the inputs and outputs of the created program could be done through a UCF file (Implementation Constraint File ). A  UCF file could be created by selecting the Implementation Constraint File in the new Source wizard panel.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/a2}
+	\caption{Selecting the correct device and the design flow}
+	\label{fig:a2}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/c1}
+	\caption{Obtaining the new Source wizard panel}
+	\label{fig:c1}
+\end{figure}
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{pics/vhdl/c3}
+		\caption{Creating a new VHDL module}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{pics/vhdl/c4}
+		\caption{Creating a new UCF file }
+		\label{fig:sub2}
+	\end{subfigure}
+	\caption{Using the new Source wizard panel}
+	\label{fig:animals}
+\end{figure}
+
+\noindent
+After creating a new project and the needed program was coded, the next step was to check the code for errors and generate the bit file needed. In checking the code for errors, the following procedure was followed.
+\begin{enumerate}
+	\item Synthesis of the XST.
+	\item Implementation of the device.
+	\item Generation of the programming file.
+\end{enumerate}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{pics/vhdl/m1}
+	\caption{Compilation of the code}
+	\label{fig:m1}
+\end{figure}
+
+\noindent
+After the compilation and the generation of the programming file was successful, the created bit file could be uploaded to the FPGA board using the Adept software.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{pics/vhdl/screenshot07}
+	\caption{Selection of the bit file}
+	\label{fig:screenshot07}
+\end{figure}
+
+\noindent
+In addition to synthesizing a program in a FPGA board, the created program can be simulated virtually. This could be done by the ISE Simulator (ISIM) which comes as an embedded feature of the ISE. The simulator can be accessed by selecting the Simulation view in the design menu.  
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/m8}
+	\caption{Selection of the ISIM}
+	\label{fig:m8}
+\end{figure}
+
+\noindent
+Then, the behaviour of the model can be simulated after completing the behavioural syntax check procedure.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/m9}
+	\caption{Accessing the ISIM}
+	\label{fig:m8}
+\end{figure}
+ 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/vhdl/m10}
+	\caption{Interface of the ISIM}
+	\label{fig:m10}
+\end{figure}
+ 
+\pagebreak
+
+\noindent
+After getting familiar with the FPGA and the ISE, the next objective was to complete the specified tasks. These specified tasks were  divided into 2 main sections.
+
+\begin{enumerate}
+	\item Introduction to VHDL.
+	\item DDS using FPGA.
+\end{enumerate}
+
+\subsection{Introduction to VHDL}
+
+\noindent
+The first section of the practical included the following exercises.
+ 
+\begin{enumerate}
+	\item Synthesis of a 2-input AND gate.
+	\item Synthesis of a BCD to SSD decoder.
+	\item Modification of the BCD to SSD decoder with a test button.
+	\item Synthesis of a mod 10 counter.
+	\item Combination of the mod 10 counter and the BCD to SSD decoder.
+\end{enumerate}
+
+\subsubsection{Synthesis of a 2-input AND gate}
+
+\noindent
+In this exercise, a 2-input AND gate was synthesized. In this process, the inputs were assigned to switches SW1 (L3) and SW2 (K3) and the output was assigned to the LED LD0 (M5). The  code and the appropriate UCF file are attached in the Appendix A. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/m4}
+	\caption{Switches which represents the inputs of the AND gate}
+	\label{fig:m4}
+\end{figure}
+
+\subsubsection{Synthesis of a BCD to SSD decoder}
+
+\noindent
+In this exercise,  a BCD to SSD decoder was synthesized. In this process, 4 switches were used as the inputs and the output was displayed through the SSD. Any binary number between 0 and 9 could be displayed by switching on the 4 switches SW0 (P11), SW1 (L3), SW2 (K3) and SW4 (B4) in which SW0 represented the least significant bit (LSB) and SW3 represented the most significant bit (MSB). The digit which represented the selected number could be changed using switches SW4, SW5, SW6 and SW7. Then, the program was simulated in ISIM to view the output. The  code and the appropriate UCF file are attached in the Appendix B.   
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{pics/vhdl/m2}
+		\caption{Switches to change the number which is displayed on the SSD }
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{pics/vhdl/m3}
+		\caption{Swithces to select the digit which is lit}
+		\label{fig:sub2}
+	\end{subfigure}
+	\caption{Action of switches in the BCD to SSD decoder}
+	\label{fig:sub2}
+\end{figure}
+
+\pagebreak
+
+\subsubsection{Modification of the BCD to SSD decoder with a test button}
+
+\noindent
+In this exercise, the BCD to SSD decoder constructed in the previous exercise was modified by adding a test button. The purpose of a test button was to override the current operation of the FPGA and illuminate all the digits of the SSD. For this operation, the push button BTN3 (A7) was used. The  code and the appropriate UCF file are attached in the Appendix C.
+ 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/m5}
+	\caption{The push button used as the test button}
+	\label{fig:m5}
+\end{figure}
+
+\subsubsection{Synthesis of a mod 10 counter}
+
+\noindent
+In this exercise, a mod 10 counter was synthesized. In this process, the LEDs LD0 (M5), LD1 (M11), LD2 (P7) and LD3 (P6) were used as the outputs. The LD3 was considered as the  most significant bit and LD0 was considered as the least significant bit. As the clock frequency of the FPGA clock was 50 MHz, the action of the counter was not visible to the naked eye. So, a new clock of 1 Hz was formed and the counter was increased at the rising edge of the new clock of 1 Hz. A push button BTN3 (A7) was added to reset the  mod 10 counter and initialize it. Then, the program was simulated in ISIM to view the output. The  code and the appropriate UCF file are attached in the Appendix D.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/m6}
+	\caption{The output LEDs and the reset button}
+	\label{fig:m6}
+\end{figure}
+
+\subsubsection{Combination of the mod 10 counter and the BCD to SSD decoder}
+
+\noindent
+In this exercise, the mod 10 counter and the BCD to SSD decoder which were synthesized earlier were combined together. In this process, the output (the numbers from 0 to 9) was displayed through the SSD. The digits which showed the output could be selected by using switches SW4 (G3), SW5 (F3), SW6 (E2) and SW7 (N3). The  counter could be reset and initialized to 0 using the push button BTN3 (A7). The  code and the appropriate UCF file are attached in the Appendix E.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/m7}
+	\caption{The switches that select the needed digit in the SSD and the reset button}
+	\label{fig:m7}
+\end{figure}
+
+\pagebreak
+
+\subsection{DDS using FPGA}
+
+This section comprised of 3 exercises.
+\begin{enumerate}
+	\item Production of a ramp signal.
+	\item Production of a square signal.
+	\item Production of a sinusoidal signal.
+\end{enumerate}
+
+\subsubsection{Production of a ramp signal}
+
+\noindent
+This exercise consisted of 3 steps.
+\begin{enumerate}
+	\item Production of a saw tooth signal using an up counter
+	\item Production of a square tooth signal using a down counter
+	\item Production of a triangular signal using an up and down counter
+\end{enumerate}
+
+\noindent
+\textbf{Production of a saw tooth signal using an up counter}\\
+
+\noindent
+Here, as the first step, a 8 bit up counter was constructed. Then, the outputs of that counter were connected to a R-2R ladder. When connecting the outputs of the counter to the ladder, care had to be taken so that the bit order of the  counter and the ladder were the same (LSB to LSB and MSB to MSB). Then, the output of the  R-2R ladder was observed through the DSO.\\
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/basic_r8}
+	\caption{Connecting a R-2R ladder}
+	\label{fig:basicr8}
+\end{figure}
+
+\noindent
+\textbf{Production of a saw tooth signal using an up counter}\\
+
+\noindent
+Here, as the first step, a 8 bit down counter was constructed. Then, the outputs of that counter were connected to a R-2R ladder. Then, the output of the  R-2R ladder was observed through the DSO.\\
+
+
+\noindent
+\textbf{Production of a triangular signal using an up and down counter}\\
+
+\noindent
+Here, as the first step, a 8 bit up/down counter which counts from 0 to 255 and then fron 255 to 0 was constructed. Then, the outputs of that counter were connected to a R-2R ladder. Then, the output of the  R-2R ladder was observed through the DSO.\\
+
+\noindent
+Finally, both the up and down counters were incorporated together so that any of up, down or up and down counters could be selected thereby selecting between a saw tooth signal or a triangular signal. For this process the switches SW1 (P11) were SW1 (L3) used. The selection of the counter type was done as follows.
+\begin{enumerate}
+	\item If only SW0 was switched on, the up counter was selected forming a saw tooth signal.
+	\item  If only SW1 was switched on, the down counter was selected forming a saw tooth signal.
+	\item If both SW0 and SW1 were switched on, the up and down counter was selected forming a triangular signal.
+\end{enumerate}
+
+\noindent
+Additionally, a reset button was added to reset the counters. For this purpose, the push button BTN3 (A7) was used. The  code and the appropriate UCF file are attached in the Appendix F.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/p13}
+	\caption{Switches and the  button used in the selection of the counter type and resetting of the counter respectively}
+	\label{fig:basicr8}
+\end{figure}
+
+\subsubsection{Production of a square signal}
+
+\noindent
+In this exercise, a square signal was produced. For this process, a  8 bit up and down counter coupled with a R-2R ladder and a comparator  were used. The purpose of the counter and the R-2R ladder was to produce a triangular wave. The comparator was used to make a square signal from the supplied triangular signal. \\
+
+\noindent
+As the comparator, a ua 741 op amp operating in single rail (3.3 V and 0 V)  was used. To supply power to the op amp, the VCC  and GND pins of the FPGA board were used. The triangular  signal produced by the 8 bit up and down counter coupled with a R-2R ladder was connected to the non-inverting input and the reference voltage was connected to the inverting input. \\
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/ua741}
+	\caption{The pin configuration of the ua 741 op amp}
+	\label{fig:ua741}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/comp}
+	\caption{The ua 741 op amp as the comparator}
+	\label{fig:comp}
+\end{figure}
+
+
+
+\noindent
+As the duty cycle of the produced square signal from the comparator was dependent on the reference voltage connected to the inverting input of the op amp, 4 switches were used to produce a variable reference voltage. Here, the switches SW4 (G3), SW5 (F3), SW6 (E2) and SW7 (N3) were used. The SW4 was considered the LSB and SW7 was considered the MSB. By using the switches, a 4 bit binary number from 0 to 15 could be generated. Then, the outputs of these 4 switches were connected to another R-2R ladder for the purpose of converting the digital signal to an analog voltage. The output of this R-2R ladder was connected to the inverting input. So, by using the switches, the duty cycle of the square signal could be controlled.\\
+
+\noindent
+A reset button was used to reset the counters. For this purpose,  the push button BTN3 (A7) was used. The  code and the appropriate UCF file are attached in the Appendix G.
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/m7}
+	\caption{The switches used to control the reference voltage and the reset button}
+	\label{fig:m7}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{pics/vhdl/t1}
+		\caption{The outputs of the up and down \newline counter connected to the R-2R ladder}
+		\label{fig:t1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{pics/vhdl/t2}
+		\caption{Outputs to the other R-2R ladder to create the reference voltage}
+		\label{fig:sub2}
+	\end{subfigure}
+	\caption{The outputs of the FPGA board}
+	\label{fig:t2}
+\end{figure}
+
+\subsubsection{Production of a sinusoidal signal}
+
+\noindent
+In this exercise, a sinusoidal signal was produced. For this process, a look up table had to be used in order to generate the amplitudes of a sinusoidal signal. Then, the values in the look up table were input to a 8 bit R-2R ladder in order to create the needed sinusoidal signal.\\
+
+\noindent
+The needed lookup table was generated using the Microsoft Excel software. In this process, the following steps were followed.
+\begin{enumerate}
+	\item Generation of numbers from 0 to 180 with unit increments.
+	\item Conversion of the numbers to radians.
+	\item Getting the sin values of the radian values.
+	\item Multiplication of the sin values by 255.
+	\item Conversion of the numbers obtained in step 4 to 8 bit binary numbers.
+\end{enumerate} 
+
+\noindent
+Then, the produced binary numbers were incorporated with the vhdl code through a select case. The 8 bit binary pattern produced by the FPGA was provided to the afore mentioned R-2R ladder and the output of the ladder was viewed through the DSO. As the input,a reset button was used to reset the counters. For this purpose,  the push button BTN3 (A7) was used. The  code and the appropriate UCF file are attached in the Appendix H.
+
+\pagebreak
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/vhdl/m5}
+	\caption{The push button used as the reset button}
+	\label{fig:m5}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/vhdl/t1}
+	\caption{The pins of the FPGA connected to the R-2R ladder}
+	\label{fig:t1}
+\end{figure}
+
+\pagebreak
+

@@ -1,0 +1,234 @@
+\subsection{Combinational and sequential logic}
+
+\subsubsection{Combinational logic}
+
+It's the type of logic in which the output depends only on the current inputs. In other words, it can be referred to as time-independent logic due to the fact that the output is a function dependent only on the present inputs. Logic gates are the building block of combinational logic circuits.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/cmb}
+	\caption{Combinational logic representation}
+	\label{fig:cmb}
+\end{figure}
+ 
+\noindent
+Construction of combinational logic can be done using one of the following methods.
+\begin{enumerate}
+	\item Sum of products (SOP) method - equations written as an OR of AND terms.
+	\item Product of sums (POS) method - equations written as an AND of OR terms.	
+\end{enumerate}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/sop}
+	\caption{Implementation of the same equation using SOP and POS methods}
+	\label{fig:sop}
+\end{figure}
+
+\subsubsection{Sequential logic}
+
+It's the type of logic in which the output does depend on the previous inputs (input  history). In other words, the output is a function of not only the present input, but also of the past inputs. As there is a dependency of the output with past inputs, memory is required to store the past inputs. These memory (storage) units are connected to combinational logic blocks via feedback loops. Latches and flip-flops are the building block of combinational logic circuits.
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/seq}
+	\caption{Sequential logic representation}
+	\label{fig:seq}
+\end{figure}
+
+\noindent
+There are 2 types of sequential logic.
+\begin{enumerate}
+	\item Synchronous sequential logic.
+	\item Asynchronous sequential logic.	
+\end{enumerate}
+
+\noindent
+\textbf{Synchronous sequential logic}\\
+
+\noindent
+In synchronous sequential circuits, the states and outputs change with respect to a clock signal. The basic memory element in sequential logic is the flip-flop. The outputs of all the flip-flops and their binary data are collectively called the state of the circuit. The next state is determined by the current state and the value of the input signals only when the clock pulse occurs. There are 2 main disadvantages of sequential logic circuits over the asynchronous logic circuits.
+\begin{enumerate}
+	\item Maximum clock speed is dependent on the slowest path (critical path).
+	\item Distribution of the clock signal to each and every flip-flop.	
+\end{enumerate}
+
+\noindent
+\textbf{Asynchronous sequential logic}\\
+
+\noindent
+In asynchronous sequential logic circuits, transition from one state to another is initiated by the change in the primary inputs, totally independent on a clock. Asynchronous sequential logic circuits are faster than the synchronous logic circuits as state changes aren't initiated by a clock. The speed of the circuit depends only on propagation delays in the logic gates used. The main disadvantage of asynchronous sequential logic circuits is the sensitivity to the order in which the signals arrive a latch or a flip-flop. This condition is called a race condition.
+
+\pagebreak
+
+\subsection{Latches and flip-flops}
+
+\subsubsection{Latches }
+
+\noindent
+Logic gates are the building blocks of latches.Latches contain only 2 output states.
+\begin{enumerate}
+	\item High-output.
+	\item Low-output.
+\end{enumerate}
+
+\noindent
+Latches can act as memory devices by saving one bit of data until the device has power. This memory comes as a consequence of the feedback paths connecting the logic gates inside the latch. Latches are asynchronous (clock independent) unlike like flip-flops.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{pics/vhdl/sr'}
+	\caption{A simple SR latch}
+	\label{fig:sr}
+\end{figure}
+
+\subsubsection{Flip-flops }
+
+Flip-flops are comprised of latches. The main difference from latches is that flip-flops are synchronous. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/vhdl/lf}
+	\caption{Differences between latches and flip-flops}
+	\label{fig:lf}
+\end{figure}
+
+\pagebreak
+
+\subsection{Finite state machines (FSMs)}
+
+\noindent
+It's a mathematical model of computation in which a process is equated to an abstract machine whose state can be  exactly one of a finite number of states at any given time. A FSM can make a transition from one state to another in response to one or more external inputs. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/jk}
+	\caption{Truth table of a JK flip-flop}
+	\label{fig:jk}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/32-sr-states}
+	\caption{State diagram of a JK flip-flop}
+	\label{fig:32-sr-states}
+\end{figure}
+
+\noindent
+Based on the actions followed in order to generate an output based on a given input and/or a state using actions, FSMs can be divided to 2 categories.
+\begin{enumerate}
+	\item Moore machine.
+	\item Mealy machine.
+\end{enumerate}
+
+\subsubsection{Moore machine}
+In this model, the output is dependent only on the current state of the machine. The outputs change synchronously with the state transition triggered by the active clock edge applied to the memory elements.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/mor}
+	\caption{Moore machine}
+	\label{fig:mor}
+\end{figure}
+
+\subsubsection{Mealy machine}
+In this model, the output depends on both the current state and the inputs to the machine. The output of a Mealy machine doesn't need to be governed by a clock pulse. It can change asynchronously in response to any change in the input.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/moe}
+	\caption{Mealy machine}
+	\label{fig:moe}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/mVm}
+	\caption{Comparison of Mealy and Moore Machines while designing ‘10’ pattern detector.}
+	\label{fig:mvm}
+\end{figure}
+
+\pagebreak
+
+\subsection{Johnson counter}
+
+\noindent
+Johnson counter is a type of a ring counter used in hardware logic designs like FPGAs to create complex finite state machines. Ring counters are comprised of shift registers.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/j1}
+	\caption{Implementation of a 4 bit Johnson counter}
+	\label{fig:j1}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/j2}
+	\caption{Truth table of a 4 bit Johnson counter }
+	\label{fig:j2}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/vhdl/j3}
+	\caption{State diagram of a 4 bit Johnson counter}
+	\label{fig:j3}
+\end{figure}
+
+\pagebreak
+
+\subsection{JTAG}
+
+\noindent
+JTAG is the abbreviation for the Joint Test Action Group. JTAG implements standards for on-chip instrumentation in electronic design automation (EDA) as a complementary tool to digital simulation. Processors often use JTAG to provide access to their debug functions. FPGAs and CPLDs use JTAG as the doorway to their programming functions. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/fsec-2014-i-can-haz-your-board-with-jtag-6-638}
+	\caption{JTAG components}
+	\label{fig:fsec-2014-i-can-haz-your-board-with-jtag-6-638}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/jtag}
+	\caption{Programming through JTAG}
+	\label{fig:jtag}
+\end{figure}
+
+\subsection{Antifuse}
+
+\noindent
+An antifuse is a device which behaves in the opposite way to fuses. While fuses burn  when the voltage through the fuse exceeds some threshold stopping the conduction of current, antifuse starts to conduct permanently when the voltage exceeds some threshold. Incorporating antifuse technology in PLDs enable the user to permanently program the device a single time. After that, the device can't be erased.
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/vhdl/VIA}
+	\caption{Antifuse surface}
+	\label{fig:via}
+\end{figure}
+
+\subsection{Direct digital synthesis (DDS)}
+
+\noindent
+DDS is the process of generating analog signals using digital techniques. The analog signals are synthesized from values stored in memory. A digital to analog converter is used to convert the needed digital signal to an analog signal. Some advantages of using DDS are as follows.
+\begin{itemize}
+	\item  The ability to generate arbitrary frequencies with accuracy and stability.
+	\item  The reliability and repeatability of the signals produced by DDS.
+	\item High frequency resolution.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/i3}
+	\caption{Block diagram representing the main components in a DDS system}
+	\label{fig:i3}
+\end{figure}
+
+
+\pagebreak

@@ -1,0 +1,73 @@
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The first working transistor and the IC in the world\relax }}{1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Classes of ICs\relax }}{1}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces VHDL design flow\relax }}{3}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Combinational logic representation\relax }}{4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Implementation of the same equation using SOP and POS methods\relax }}{4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sequential logic representation\relax }}{5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A simple SR latch\relax }}{6}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Differences between latches and flip-flops\relax }}{6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Truth table of a JK flip-flop\relax }}{7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces State diagram of a JK flip-flop\relax }}{7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Moore machine\relax }}{8}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Mealy machine\relax }}{8}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Comparison of Mealy and Moore Machines while designing \IeC {\textquoteleft }10\IeC {\textquoteright } pattern detector.\relax }}{8}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Implementation of a 4 bit Johnson counter\relax }}{9}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Truth table of a 4 bit Johnson counter \relax }}{9}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces State diagram of a 4 bit Johnson counter\relax }}{9}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces JTAG components\relax }}{10}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Programming through JTAG\relax }}{10}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Antifuse surface\relax }}{11}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Block diagram representing the main components in a DDS system\relax }}{11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Front look of the Basys2 Spartan-3E FGPA board \relax }}{12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Pin definitons of the Basys2 Spartan-3E FGPA board\relax }}{12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Installation of the ISE Design Suite: System Edition\relax }}{12}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Selecting the correct device and the design flow\relax }}{13}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Obtaining the new Source wizard panel\relax }}{13}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Using the new Source wizard panel\relax }}{14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Compilation of the code\relax }}{14}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Selection of the bit file\relax }}{14}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Selection of the ISIM\relax }}{15}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Accessing the ISIM\relax }}{15}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Interface of the ISIM\relax }}{15}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Switches which represents the inputs of the AND gate\relax }}{16}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Action of switches in the BCD to SSD decoder\relax }}{16}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces The push button used as the test button\relax }}{17}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces The output LEDs and the reset button\relax }}{17}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces The switches that select the needed digit in the SSD and the reset button\relax }}{17}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Connecting a R-2R ladder\relax }}{18}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Switches and the button used in the selection of the counter type and resetting of the counter respectively\relax }}{19}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces The pin configuration of the ua 741 op amp\relax }}{19}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces The ua 741 op amp as the comparator\relax }}{19}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces The switches used to control the reference voltage and the reset button\relax }}{20}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces The outputs of the FPGA board\relax }}{20}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces The push button used as the reset button\relax }}{21}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces The pins of the FPGA connected to the R-2R ladder\relax }}{21}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The output of the AND gate when simulated through ISIM\relax }}{22}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The output of the AND gate for various input states\relax }}{22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The output of the BCD to SSD decoder when simulated through ISIM\relax }}{23}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The outputs of the BCD to SSD decoder \relax }}{23}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Controlling of the digits in the SSD\relax }}{24}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces SSD diagram and the schematic\relax }}{24}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Action of the test button\relax }}{25}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces The output of the counter when simulated through ISIM\relax }}{25}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces The output of the counter displayed by LEDs when synthesized through the FPGA\relax }}{25}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces The output when simulated using ISIM \relax }}{26}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces The output when synthesized through the FPGA\relax }}{26}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Controlling of the digits in the SSD\relax }}{26}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Up counter simulated by ISIM\relax }}{27}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Waveform of the up counter\relax }}{27}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Down counter simulated by ISIM\relax }}{28}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Waveform of the saw tooth signal formed by the down counter\relax }}{28}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Up and down counter simulated by ISIM\relax }}{29}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Waveform of the triangular signal formed by the up and down counter\relax }}{29}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Waveform of the square signal formed \relax }}{30}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Waveforms obtained when the switches were used\relax }}{30}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces The output when synthesized through the FPGA\relax }}{31}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Waveform of the sinusoidal signal formed \relax }}{31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Generation of the PROM file\relax }}{32}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Changing from FPGA to PROM\relax }}{32}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Selecting the schematic view\relax }}{32}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The schematics of an AND gate\relax }}{33}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Instance dialog\relax }}{33}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Selection of static timing\relax }}{34}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Delay information of an AND gate where a and b are inputs and c is the output\relax }}{34}

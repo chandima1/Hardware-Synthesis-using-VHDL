@@ -1,0 +1,100 @@
+The electronic world turned a new page in its advancement with the invention of the transistor by  Physicists John Bardeen, Walter Brattain, and William Shockley. This was a revolution in the contemporary electronic world to an extent that it won the Nobel prize for Physics in 1956. The next big leap from the  transistor was the integrated circuit (IC). It was the next big thing in the contemporary electronic market.
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{pics/vhdl/Replica-of-first-transistor}
+		\caption{A replica of the first working transistor}
+		\label{fig:replica-of-first-transistor}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{pics/vhdl/kilby_solid_circuit}
+		\caption{The first working IC}
+		\label{fig:kilby_solid_circuit}
+	\end{subfigure}
+	\caption{The first working transistor and the IC in the world}
+	\label{fig:animals}
+\end{figure}
+
+
+\noindent
+From the development of the first working IC in 1958 by Jack Kilby, the IC technology has developed in leaps and bounds. Billions of components are contained inside modern ICs. With the exponential increase in usage of the ICs in a myriad of fields, the  ICs were customized for suiting the need. 
+
+\begin{figure}[!hb]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/ic_world}
+	\caption{Classes of ICs}
+	\label{fig:icworld}
+\end{figure}
+
+\noindent
+The main IC classes are the application specific type and the user programmable type. The application specific ICs (ASIC) are customized for a particular use, rather than for general-purpose use. The user programmable ICs like FPGA and PLD can be programmed by the user according to the requirement.\\
+
+\noindent
+The main types of user programmable devices are the FPGA and PLD. 
+\begin{enumerate}
+	\item FPGA -  field programmable gate array 
+	\item PLD - programmable logic device
+\end{enumerate}
+
+\noindent
+PLDs  are electronic components used to build reconfigurable digital circuits.Prior to operating a PLD in a circuit, it must be programmed (reconfigured). Basically 2 categories of PLDs exist.
+
+\begin{enumerate}
+	\item SPLD (simple programmable logic device).
+	\item CPLD (complex programmable logic device).
+\end{enumerate}
+
+\noindent
+SPLDs are the simplest, smallest and least-expensive forms of PLDs. SPLDs can be used as an alternative to standard logic components (AND, OR and NOT gates).\\
+
+\noindent
+CPLD is a combination of a fully programmable AND/OR array and a bank of macrocells. The AND/OR array is reprogrammable and can perform a multitude of logic functions. Macrocells are functional blocks that perform combinatorial or sequential logic, and also have the added flexibility for true or complement, along with varied feedback paths.\\
+
+\noindent
+A field-programmable gate array (FPGA) is an IC designed to be configured by the user unlike an ASIC. advantageous comprise of the following components.
+\begin{itemize}
+	\item CLBs (configurable logic blocks) - to perform logic.
+	\item IOBs (input/output buffers) - for interfacing with the outside world.
+	\item Programmable interconnections - for connecting CLBs and IOBs.
+	\item RAM (random access memory).
+	\item Multipliers.	
+\end{itemize}
+
+\noindent
+FPGAs are more advantageous than ASICs due to the following reasons.
+\begin{itemize}
+	\item Low development cost.
+	\item Reconfigurability. 
+	\item Off-the-shelf.
+\end{itemize}
+
+\noindent
+The major vendors of FPGAs are as follows.
+\begin{itemize}
+	\item Xilinx, Inc.
+	\item Altera Corp.
+	\item Atmel.
+	\item Lattice Semiconductor.
+\end{itemize}
+
+\noindent
+A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. In FPGAs, a special type of programming language called the hardware description language (HDL) is used. It is a specialized computer language used to describe the structure and behavior of  digital logic circuits. There are many HDLs like Abel, CUPL, Verilog, AHDL and VHDL.\\
+
+\noindent
+VHDL is the programming language used in this practical. VHDL stands for VHSIC hardware description language. VHSIC is the abbreviation for very high speed integrated circuits. VHDL is intended for both circuit synthesis and circuit simulation. \\
+
+\noindent
+VHDL is usually regarded as a code rather as a program due to the fact that the order of command execution is parallel (concurrent) unlike in regular computer programs. In VHDL, the statements placed inside PROCESS, FUNCTION or PROCEDURE are executed sequentially. The following figure depicts the design flow of a VHDL program.
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/vhdl/flow}
+	\caption{VHDL design flow}
+	\label{fig:flow}
+\end{figure}
+
